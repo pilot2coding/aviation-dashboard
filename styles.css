@@ -5,6 +5,7 @@
 }
 
 body{
+    background-color: rgb(236, 238, 241);
     overflow-x: hidden;
     display: flex;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -27,9 +28,9 @@ h1{
     grid-template-rows: 100px;
     grid-template-columns: 2fr 10fr;
     grid-template-rows: auto;
-    border: 2px solid black;
     align-items:flex-start;
     max-height: 5.5rem;
+    margin-top: 7.5px;
     
 }
 .header img{
@@ -40,12 +41,16 @@ h1{
 #sidebar{
     display: flex;
     flex-direction: column;
-    background-color: aqua;
-    border: 2px dotted;
+    background-color: #3EB3F2;
     width: 35%;
     max-width: 260px;
-    height: 100vh;;
+    height: 100vh;
+    color: white;
     
+}
+
+#sidebar img{
+    filter: invert(1);
 }
 
 #quicksearch{
@@ -55,7 +60,8 @@ h1{
     text-align: center;
     align-items:self-start;
     grid-auto-rows: auto;
-    border: 2px solid black;
+    margin-top: 25px;
+    
 }
 
 #quicksearch h3{
@@ -78,7 +84,6 @@ h1{
     text-align: center;
     align-items:self-start;
     grid-auto-rows: auto;
-    border: 2px solid black;
     margin-top: 60px;
 }
 #settings-menu h3{
@@ -98,13 +103,14 @@ h1{
 #main-bar{
     display: grid;
     position: absolute;
-    left: 256px; 
+    left: 260px; 
     top: 0; 
-    border: 2px solid black;
-    background-color: red;
+    background-color: white;
     width: 100%; 
     height: 16.5vh;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
+
 
 .search-bar{
     display: grid;
@@ -125,19 +131,18 @@ h1{
     height: 25px;
     margin-top: 28.5px;
     margin-left:-5px;
-    border-radius: 5px;
-    border: solid;
+    border-radius: 8px;
+    border: solid 2px rgb(236, 238, 241);
+    background-color: rgb(236, 238, 241);
 }
 
 #user-interface{
     display: flex;
     align-self: self-start;
     position: absolute;
-    left: 65%;
+    left: 55%;
     top: -10%;
-    grid-template-columns: 25fr 35fr 50fr;
-    grid-template-rows: 1fr;
-    border: 2px solid black;
+    justify-content: space-evenly;
     width: 300px;
     height: 100px;
     align-items: center;
@@ -156,11 +161,162 @@ h1{
     width: auto;
     margin-top:12px;
     margin-right: 1px;
-    margin-left: -5px;
+    
 }
 
 #user-interface h3{
     margin-top: 12.5px;
-    margin-left: -20px;
     
 }
+
+.user-profile{
+    display: flex;
+    flex-direction: row;
+}
+
+.user-profile{
+    display: grid;
+    position: absolute;
+    left: 1.5%;
+    top: 42.5%;
+    grid-template-columns: 2fr 6.5fr;
+    max-width: 350px;
+    max-height: fit-content;
+}
+
+.user-profile img{
+    border-radius: 1000px;
+    height: 65px;
+    width: 65px;
+    margin-top: 7.5px;
+}
+
+.user-profile #welcome-message{
+    font-size: 15px;
+}
+
+.user-profile h3{
+    margin-top: 15px;
+}
+
+.bar-buttons{
+    position: absolute;
+    gap: 20px;
+    left: 50%;
+    top: 65%;
+    width: 500px;    
+}
+
+.bar-buttons button{
+    width: 125px;
+    height: 30px;
+    border-radius: 20px;
+    border: 2px solid #3EB3F2;
+    margin-right: 25px;
+    background-color: #3EB3F2;
+    color: white;
+    font-weight: bolder;
+}
+
+#main-dashboard{
+    width: 960px;
+    height: 75vh;
+    position: absolute;
+    top: 117%;
+    left: 1.5%;
+}
+
+#dashboard-boxes{
+    display: grid;
+    grid-template-columns: 2fr 20fr 45fr;
+}
+
+.dashboard-box{
+    width: 300px;
+    height: 175px;
+    padding-top: 10px;
+    padding-left: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    border-left: 5px solid #FFC107;
+}
+
+#announcements{
+    position: absolute;
+    top: -0.5%;
+    left: 100%;
+    width: 300px;
+    height: fit-content;
+}
+
+#announcement-box{
+    background-color: white;
+    width: 17.5vw;
+    height: 30vh;
+    margin-top: 9.75px;
+    padding-left: 15px;
+    padding-top: 20px;
+    border-radius: 10px;
+    display: grid;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.announcement-sub:nth-child(-n+2){
+    border-bottom:2px solid gainsboro;
+}
+.announcement-sub:nth-of-type(2), .announcement-sub:nth-of-type(3){
+    margin-top: 20px;
+}
+
+#trending{
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 300px;
+    height: fit-content;
+}
+
+.trending-box{
+    background-color: white;
+    width: 17.5vw;
+    height: 30vh;
+    margin-top: 9.75px;
+    padding-left: 10px;
+    padding-top: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 0.1fr;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.trending-sub{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 10fr 50fr;
+    gap: 5px;
+    min-height: 80px;
+
+}
+
+.trending-text-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 12.5px;
+    margin-left: 5px;
+}
+
+.trending-sub img{
+    grid-row: span 2;
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+}
+
+.trending-sub p{
+    font-size: 15px;
+    color: gray;
+}
+
